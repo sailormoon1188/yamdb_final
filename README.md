@@ -1,5 +1,7 @@
 <a id="anchor"></a>
 
+![workflow](https://github.com/sailormoon2111/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?event=push)
+
 ###REST API для сервиса **YaMDb** 
 _База отзывов о фильмах, книгах и музыке._
 

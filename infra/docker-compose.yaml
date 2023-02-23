@@ -10,7 +10,7 @@ services:
 
 
   web:
-    build: ../api_yamdb/
+    image: mariavan88/api_yamdb-web:v1
     restart: always
     volumes:
       - static_value:/app/static/
