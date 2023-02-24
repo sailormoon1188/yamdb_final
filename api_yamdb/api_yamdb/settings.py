@@ -1,7 +1,6 @@
 import os
 from datetime import timedelta
 
-
 RESERVED_NAME = 'me'
 MESSAGE_FOR_RESERVED_NAME = 'Имя пользователя "me" использовать нельзя!'
 MESSAGE_FOR_USER_NOT_FOUND = 'Пользователя с таким именем нет!'

@@ -1,10 +1,10 @@
 import datetime as dt
+
 from rest_framework import serializers
 
-
 from reviews.models import (
-    Review, Comment,
-    Category, Genre, Title
+    Category, Comment,
+    Genre, Review, Title
 )
 
 
