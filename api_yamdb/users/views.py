@@ -7,7 +7,6 @@ from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import AccessToken
-
 from users.models import User
 from users.permissions import IsAdmin
 from users.serializers import AuthSerializer, TokenSerializer, UserSerializer
