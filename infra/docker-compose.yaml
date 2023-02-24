@@ -10,7 +10,7 @@ services:
 
 
   web:
-    image: mariavan88/api_yamdb-web:v1
+    image: mariavan88/yamdb-final:v2
     restart: always
     volumes:
       - static_value:/app/static/
