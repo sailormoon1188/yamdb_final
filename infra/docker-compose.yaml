@@ -10,7 +10,7 @@ services:
 
 
   web:
-    image: mariavan88/yamdb-final:v3
+    image: mariavan88/yatube-api:v1
     restart: always
     volumes:
       - static_value:/app/static/
