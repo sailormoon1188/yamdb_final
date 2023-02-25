@@ -25,8 +25,8 @@ jobs:
         pytest
     
   build_and_push_to_docker_hub:
-    name: Push Docker image to Docker Hub
     if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+    name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     needs: tests
     steps:
@@ -43,7 +43,7 @@ jobs:
         uses: docker/build-push-action@v2 
         with:
           push: true
-          tags: ${{ secrets.DOCKER_USER }}/api_yamdb-web:v1
+          tags: ${{ secrets.DOCKER_USER }}/yamdb-final:v1
           file: api_yamdb/Dockerfile
       - name: Send message if build_and_push_to_docker_hub failed
         if: ${{ failure() }}
