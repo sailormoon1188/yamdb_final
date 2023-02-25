@@ -10,7 +10,7 @@ services:
 
 
   web:
-    image: mariavan88/yambd-ap-maria:v1
+    image: mariavan88/yamdb-final:v3
     restart: always
     volumes:
       - static_value:/app/static/
