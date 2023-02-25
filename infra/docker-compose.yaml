@@ -35,6 +35,5 @@ services:
 
 volumes:
   postgres-db-data:
-    name: postgres-db-data
   static_value:
   media_value:
