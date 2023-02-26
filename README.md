@@ -219,7 +219,7 @@ docker-compose exec web python manage.py createsuperuser
 docker-compose exec web python manage.py collectstatic --no-input
 ```
 ```
-#Создаем дамп базы данных (нет в текущем репозитории):
+#Создаем дамп базы данных :
 docker-compose exec web python manage.py dumpdata > dumpPostrgeSQL.json
 ```
 ```
