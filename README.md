@@ -29,45 +29,43 @@ _База отзывов о фильмах, книгах и музыке._
 
 **JWT-токен** (Отправление confirmation_code на переданный email, получение JWT-токена в обмен на email и confirmation_code. Также для сеперюзера предусмотрена возможность получения и обновления токена через встроенные в Simple JWT эндпоинты.)
 
-**После запуска проекта ознакомиться с документацией можно по ссылке** http://localhost/redoc/
+**После запуска проекта ознакомиться с документацией можно по ссылке** http://localhost/redoc/ 
 
 **Примеры запросов и ответов (в формате json)**
 Получить токен для суперпользователя:
 POST: http://127.0.0.1:8000/api/v1/jwt/create/
 ~~~
 {
-    "username": "user_example",
-    "password": "example"
+  "username": "user_example",
+  "password": "example"
 }
 ~~~
- 
-Регистрация нового пользователя:
+ Регистрация нового пользователя:
 POST: http://127.0.0.1:8000/api/v1/auth/signup/
 ~~~
-
 {
-"email": "string",
-"username": "string"
+  "email": "string",
+  "username": "string"
 }
 ~~~
 Получение JWT-токена:
 POST: http://127.0.0.1:8000/api/v1/auth/token/
 ~~~
 {
-"username": "string",
-"confirmation_code": "string"
+  "username": "string",
+  "confirmation_code": "string"
 }
 ~~~
 Получение списка всех категорий(токен не требуется):
 GET: http://127.0.0.1:8000/api/v1/categories/
 ~~~
 [
-{
-"count": 0,
-"next": "string",
-"previous": "string",
-"results": []
-}
+  {
+    "count": 0,
+    "next": "string",
+    "previous": "string",
+    "results": []
+  }
 ]
 ~~~
 Получение списка всех жанров(токен не требуется):
@@ -87,7 +85,6 @@ GET:http://127.0.0.1:8000/api/v1/genres/
   }
 ]
 ~~~
-
 Получить информацию о произведении по id(токен не требуется):
 GET: http://127.0.0.1:8000/api/v1/titles/{titles_id}/
 ~~~
@@ -143,8 +140,6 @@ GET: http://127.0.0.1:8000/api/v1/titles/{title_id}/reviews/{review_id}/
   "pub_date": "2019-08-24T14:15:22Z"
 }
 ~~~
-
-
 Получение списка всех произведений(токен не требуется):
 GET: http://127.0.0.1:8000/api/v1/titles/
 ~~~
@@ -187,10 +182,10 @@ GET: http://127.0.0.1:8000/api/v1/titles/
 * база даннных POSTGRES
 
 **Запуск проекта**
-Клонируйте проект infra_sp2 из репозитория sailormoon2111 на GITHUB:
+Клонируйте проект yamdb_final из репозитория sailormoon2111 на GITHUB:
 
 ~~~
-git clone git@github.com:sailormoon2111/infra_sp2.git
+git clone git@github.com:sailormoon2111/yamdb_final.git
 ~~~
 
 При первом запуске для функционирования проекта обязательно установить виртуальное окружение, установить зависимости,  выполнить миграции:
@@ -248,11 +243,12 @@ POSTGRES_PASSWORD=postgres
 DB_HOST=db
 DB_PORT=5432
 ```
+***IP адресс проекта: 51.250.64.34 (домен: yamdbmaria45.myftp.org)***
 
 **Участники:**
 
 [Ванданова Мария.](https://github.com/sailormoon2111)
-Управление пользователями (Auth и Users): система регистрации и аутентификации, права доступа, работа с токеном, система подтверждения e-mail, поля. Сборка образа. 
+Управление пользователями (Auth и Users): система регистрации и аутентификации, права доступа, работа с токеном, система подтверждения e-mail, поля. Сборка образа. Деплой. 
 
 [Левкович Кирилл.](https://github.com/?????????)
 Категории (Categories), жанры (Genres) и произведения (Titles): модели, view и эндпойнты для них и рейтинги.
