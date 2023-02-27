@@ -5,20 +5,13 @@ RESERVED_NAME = 'me'
 MESSAGE_FOR_RESERVED_NAME = 'Имя пользователя "me" использовать нельзя!'
 MESSAGE_FOR_USER_NOT_FOUND = 'Пользователя с таким именем нет!'
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv("SECRET_KEY", "django-insecure")
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-
 ALLOWED_HOSTS = ['*']
-
-
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -66,21 +59,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'api_yamdb.wsgi.application'
 
-
-# Database
 DATABASES = {
     'default': {
-        'ENGINE': os.getenv('DB_ENGINE', os.getenv('DB_ENGINE', 'django.db.backends.postgresql')),
-        'NAME': os.getenv('DB_NAME', default='postgres'),
-        'USER': os.getenv('POSTGRES_USER', default='postgres'),
-        'PASSWORD': os.getenv('POSTGRES_PASSWORD', default='postgres'),
-        'HOST': os.getenv('DB_HOST', default='db'),
-        'PORT': os.getenv('DB_PORT', default='5432')
+        'ENGINE': os.getenv('DB_ENGINE', 'django.db.backends.postgresql'),
+        'NAME': os.getenv('DB_NAME', 'postgres'),
+        'USER': os.getenv('POSTGRES_USER', 'postgres'),
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD', 'postgres'),
+        'HOST': os.getenv('DB_HOST', 'db'),
+        'PORT': os.getenv('DB_PORT', '5432')
     }
 }
-
-
-# Password validation
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -97,9 +85,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-# Internationalization
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -110,19 +95,12 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-
 STATIC_URL = '/static/'
-
-# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static/'),)
-
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# User
 AUTH_USER_MODEL = 'users.User'
 
 REST_FRAMEWORK = {
@@ -136,8 +114,6 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 10
 }
 
-
-# token
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=2),
